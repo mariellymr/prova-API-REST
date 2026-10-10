@@ -11,8 +11,3 @@ CREATE TABLE IF NOT EXISTS produto (
     categoria VARCHAR(50) NOT NULL,
     preco DECIMAL(10, 2) NOT NULL
 );
-
-INSERT INTO produto (nome, categoria, preco) VALUES 
-('Espresso', 'Café Tradicional', 6.50),
-('Cappuccino Italiano', 'Bebidas Especiais', 12.00),
-('Croissant de Queijo', 'Salgados', 9.50);
