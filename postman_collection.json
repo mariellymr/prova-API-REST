@@ -1,0 +1,107 @@
+{
+  "info": {
+    "name": "API Cafeteria - CRUD Produtos",
+    "description": "Collection de testes das rotas do CRUD para a API de Cafeteria",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Listar Todos os Produtos (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/produtos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produtos"]
+        },
+        "description": "Retorna a lista de todos os produtos cadastrados"
+      },
+      "response": []
+    },
+    {
+      "name": "2. Buscar Produto por ID (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/produtos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produtos", "1"]
+        },
+        "description": "Retorna os detalhes de um produto específico pelo ID"
+      },
+      "response": []
+    },
+    {
+      "name": "3. Cadastrar Produto (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Mocha Especial\",\n  \"categoria\": \"Bebidas Quentes\",\n  \"preco\": 14.50\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/produtos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produtos"]
+        },
+        "description": "Cadastra um novo produto na cafeteria"
+      },
+      "response": []
+    },
+    {
+      "name": "4. Atualizar Produto (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Mocha Especial com Canela\",\n  \"categoria\": \"Bebidas Quentes\",\n  \"preco\": 16.00\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/produtos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produtos", "1"]
+        },
+        "description": "Atualiza os dados de um produto existente pelo ID"
+      },
+      "response": []
+    },
+    {
+      "name": "5. Deletar Produto (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/produtos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produtos", "1"]
+        },
+        "description": "Remove um produto existente pelo ID"
+      },
+      "response": []
+    }
+  ]
+}
